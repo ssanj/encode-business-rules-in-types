@@ -13,8 +13,6 @@ object PersonSolution3 extends App {
        filterNot(_.isEmpty).
        filter(_.forall(_.isLetter)).
        map(Name(_))
-
-   //def unapply(name: Name): Option[String] = Option(name.value)
   }
 
   object Age {
@@ -27,8 +25,6 @@ object PersonSolution3 extends App {
         n <- Name.createName(name)
         a <- Age.createAge(age)
        } yield Person(n, a)
-
-    // def unapply(person: Person): Option[(Name, Age)] = Option(person.name, person.age)}
   }
 
   def ageBracket(age: Age): String = {
